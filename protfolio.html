@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure Inter font is applied globally and for smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        /* Custom hamburger icon styling for better visibility and transition */
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            margin: 4px 0;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Transform hamburger lines when active */
+        .hamburger.active .line-top {
+            transform: translateY(6px) rotate(45deg);
+        }
+        .hamburger.active .line-middle {
+            opacity: 0;
+        }
+        .hamburger.active .line-bottom {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-indigo-600 rounded-md p-2">Sugandha Jha</a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-3 py-2 rounded-md">Home</a></li>
+                <li><a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-3 py-2 rounded-md">About</a></li>
+                <li><a href="#projects" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-3 py-2 rounded-md">Projects</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-3 py-2 rounded-md">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Icon -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="hamburger p-2 focus:outline-none rounded-md">
+                    <div class="hamburger-line line-top"></div>
+                    <div class="hamburger-line line-middle"></div>
+                    <div class="hamburger-line line-bottom"></div>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-4 py-2 block w-full text-center rounded-md">Home</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-4 py-2 block w-full text-center rounded-md">About</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-4 py-2 block w-full text-center rounded-md">Projects</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 ease-in-out px-4 py-2 block w-full text-center rounded-md">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex items-center justify-center min-h-screen pt-16">
+            <div class="container mx-auto px-4 py-16 text-center">
+                <img src="profile.jpg" alt="Your Photo" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Hi, I'm <span class="text-yellow-300">Sugandha Jha</span>!</h1>
+                <p class="text-lg md:text-2xl mb-8 opacity-90">A passionate <span class="font-semibold">[Your Profession/Field]</span> creating awesome things.</p>
+                <a href="#projects" class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    View My Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-700">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://placehold.co/300x400/818CF8/FFFFFF?text=About+Image" alt="About Me" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                            Hello! I'm <span class="font-semibold">Sugandha Jha</span>, a [Your Profession/Field] with [X years] of experience in [mention key areas, e.g., web development, graphic design, content writing]. I love turning complex problems into simple, elegant solutions. My passion lies in [mention your passion, e.g., creating user-centric designs, writing engaging stories, building scalable web applications].
+                        </p>
+                        <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                            Outside of work, I enjoy [mention hobbies, e.g., hiking, reading, playing music, coding for fun]. I'm always eager to learn new technologies and collaborate on exciting projects.
+                        </p>
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">HTML5</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">CSS3</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">Tailwind CSS</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">[Skill 5]</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm">[Skill 6]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-50 py-16 md:py-24">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-700">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/5B21B6/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Project Title One</h3>
+                            <p class="text-gray-600 text-sm mb-4">A brief description of Project One, highlighting its purpose and the technologies used. This could be a website, an app, a design, or a piece of writing.</p>
+                            <a href="#" class="inline-block bg-indigo-500 text-white px-5 py-2 rounded-md hover:bg-indigo-600 transition duration-300 text-sm font-medium">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/5B21B6/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Project Title Two</h3>
+                            <p class="text-gray-600 text-sm mb-4">A brief description of Project Two, explaining its features and your role in its development. Keep it concise and engaging.</p>
+                            <a href="#" class="inline-block bg-indigo-500 text-white px-5 py-2 rounded-md hover:bg-indigo-600 transition duration-300 text-sm font-medium">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/5B21B6/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Project Title Three</h3>
+                            <p class="text-gray-600 text-sm mb-4">Describe Project Three, focusing on the problem it solved or the value it created. Add relevant keywords for your field.</p>
+                            <a href="#" class="inline-block bg-indigo-500 text-white px-5 py-2 rounded-md hover:bg-indigo-600 transition duration-300 text-sm font-medium">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 max-w-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-700">Get In Touch</h2>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl">
+                    <p class="text-lg text-center mb-8 text-gray-700">
+                        Have a question, a project idea, or just want to say hello? Fill out the form below or reach out directly!
+                    </p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="your.email@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-indigo-700 transition duration-300 ease-in-out shadow-lg transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                    <div class="text-center mt-10">
+                        <p class="text-gray-700 text-lg mb-2">Or connect with me directly:</p>
+                        <p class="text-indigo-600 font-semibold mb-2">Email: <a href="mailto:your.email@example.com" class="hover:underline">your.email@example.com</a></p>
+                        <p class="text-indigo-600 font-semibold">Phone: <a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p>
+                        <!-- Add social media links if desired, e.g., LinkedIn, GitHub, etc. -->
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <!-- Example social icons (replace with actual links and icons) -->
+                            <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <!-- LinkedIn Icon SVG -->
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <!-- GitHub Icon SVG -->
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.423 2.862 8.167 6.845 9.49C9.294 21.658 9.444 21.57 9.444 21.417v-1.666c-2.784.6-3.376-1.34-3.376-1.34-.455-1.155-1.11-1.46-1.11-1.46-.909-.623.069-.61.069-.61 1.004.07 1.532 1.037 1.532 1.037.892 1.528 2.339 1.088 2.909.832.091-.645.347-1.088.634-1.337-2.239-.254-4.595-1.124-4.595-5.004 0-1.109.394-2.015 1.037-2.721-.104-.256-.449-1.285.099-2.684 0 0 .84-.271 2.75 1.033 2.61-.734 5.43-.734 8.04 0 1.91-1.304 2.75-1.033 2.75-1.033.549 1.399.204 2.428.1 2.684.643.706 1.037 1.612 1.037 2.721 0 3.889-2.359 4.745-4.6 5.004.359.309.678.917.678 1.854v2.747c0 .15.15.237.45.207C19.141 20.184 22 16.43 22 12.017 22 6.484 17.523 2 12 2z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p class="mt-2">Built with <span class="text-red-400">&hearts;</span> using HTML, CSS (Tailwind), and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a'); // Get all mobile nav links
+
+        // Function to toggle mobile menu visibility and hamburger icon animation
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.classList.toggle('active'); // Add/remove 'active' class for animation
+        }
+
+        // Add event listener to the mobile menu button
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) { // Only close if menu is open
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Optional: Close mobile menu when clicking outside (on desktop sizes, for example)
+        // This is more complex to implement reliably across all scenarios, so keeping it simple for now.
+        // For production, you might want to add a debounce or throttle to resize events.
+
+        // Smooth scrolling for all anchor links (already handled by CSS scroll-behavior: smooth, but JS can add more control if needed)
+        // This JS is redundant if CSS scroll-behavior is sufficient, but included for demonstration.
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default jump behavior
+
+                // Get the target element by its ID
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                // Check if the target element exists
+                if (targetElement) {
+                    // Scroll to the target element smoothly
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Basic form submission handling (client-side only, no backend)
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // You would typically send this data to a server here.
+                // For a simple client-side demo, we just log and show a message.
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+
+                console.log('Form Submitted:', { name, email, message });
+
+                // Display a simple confirmation message
+                const submitButton = event.target.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
+                submitButton.textContent = 'Message Sent! Thank You!';
+                submitButton.classList.add('bg-green-500', 'hover:bg-green-600'); // Change button color
+                submitButton.disabled = true; // Disable button after submission
+
+                // Reset button after a few seconds (optional)
+                setTimeout(() => {
+                    submitButton.textContent = originalButtonText;
+                    submitButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    submitButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+                    submitButton.disabled = false;
+                    contactForm.reset(); // Clear form fields
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
